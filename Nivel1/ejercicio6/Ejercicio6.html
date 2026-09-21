@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <image src="./imagen.webp" id="imagen"></image> <br>
+
+    <p>
+        Ancho
+        <input type="text" id="ancho">
+    </p>
+    <p> 
+        Alto
+        <input type="text" id="alto">
+    </p>
+
+    <button onclick="redimensionar()">Redimensionar</button>
+
+    <script>
+        
+        function redimensionar () {
+            //Cogemos la imagen
+            const imagen = document.getElementById("imagen");
+            
+            //cogemos las dimensiones que quiere el usuario
+            const d1 = +document.getElementById("ancho").value;
+            const d2 = +document.getElementById("alto").value;
+
+            //redimensionamos la imagen
+            imagen.style.width = `${d1}px`;
+            imagen.style.height = `${d2}px`;
+        }
+    </script>
+</body>
+</html>
