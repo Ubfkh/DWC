@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <input type="text" id="input1">
+            <input type="text" id="input2">
+            <button onclick="sumar()">SUMAR</button> <br><br>
+            <table id="tabla" border="1"></table>
+        </div>
+        
+
+        <script>
+
+            //creamos una función para que el script no se ejecute por defecto
+            function sumar () { 
+                //cogemos los valores de los input
+                const n1 = +document.getElementById("input1").value;
+                const n2 = +document.getElementById("input2").value;
+
+                //hacemos la suma
+                const suma = n1 + n2;
+
+                //cogemos la tabla
+                const tabla = document.getElementById("tabla");
+
+                //La editamos con innerHTML
+                tabla.innerHTML = `<tr>
+                                        <td>Primer Número</td>
+                                        <td>Segundo Número</td>
+                                        <td>Resultado</td>
+                                    </tr>
+                                    <tr>
+                                        <td>${n1}</td>
+                                        <td>${n2}</td>
+                                        <td>${suma}</td>
+                                    </tr>`
+            }
+            
+        </script>
+    </body>
+</html>
