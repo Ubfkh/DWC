@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="div">
+
+        </div>
+
+        <script>
+            //Creación de la tabla
+            const tabla = document.createElement("table");
+            //Poner borde en la tabla para que se vea bien
+            tabla.setAttribute("border", "1");
+
+            //crear los elementos de fila y columna
+            const fila1 = document.createElement("tr");
+            const celda1 = document.createElement("td");
+
+            //añadir texto a la celda para que no quede tan feo
+            celda1.textContent = "Fila 1"
+            //añadir la celda a la fila y la fila a la tabla
+            fila1.appendChild(celda1);
+            tabla.appendChild(fila1);
+
+            //repetir el proceso de arriba para una segunda fila
+            const celda2 = document.createElement("td");
+            const fila2 = document.createElement("tr");
+
+            celda2.textContent = "Fila 2";
+
+            fila2.appendChild(celda2);
+            tabla.appendChild(fila2);
+
+
+            //creamos la variable String con el estilo de la tabla
+            const stringEstilo = `table {
+                            font-size:12px;
+                            color: blue;
+                            }`;
+
+            //creamos la etiqueta de estilo y le damos el valor del string
+            const estilo = document.createElement("style");
+            estilo.textContent = stringEstilo;
+
+            //ponemos el estilo en la cabecera para que haga efecto
+            document.head.appendChild(estilo);
+
+            document.getElementById("div").appendChild(tabla);
+        </script>
+    </body>
+</html>
