@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+            <input type="text" id="input1">
+            <input type="text" id="input2">
+            <button onclick="sumar()">SUMAR</button>
+        </div>
+        
+
+        <script>
+
+            //creamos una función para que el script no se ejecute por defecto
+            function sumar () { 
+                //cogemos los valores de los input
+                const n1 = +document.getElementById("input1").value;
+                const n2 = +document.getElementById("input2").value;
+
+                //hacemos la suma
+                const suma = n1 + n2;
+
+                //mandamos el alert
+                alert(suma);
+            }
+            
+        </script>
+    </body>
+</html>
