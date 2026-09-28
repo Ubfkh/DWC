@@ -25,12 +25,27 @@
         // Pista: Debes asignar las funciones controladoras a document o window
         // ejemplo: document.onmousemove = tuFuncion;
 
+        window.addEventListener('mousemove', (evento) => {
+            let x = evento.clientX;
+            let y = evento.clientY;
+            let p = document.getElementById('p');
+            p.textContent = `Coordenada X: ${x} \n Coordenada Y: ${y}`;
+        });
+
+        window.addEventListener('keypress', (evento) => {
+            let tecla = String.fromCharCode(evento.charCode);
+            let p = document.getElementById('p');
+            p.textContent = `tecla: ${tecla}`;
+            
+            
+        });
+
     </script>
 </head>
-<body>
+<body id="body">
 <div id="info">
     <h1>Información</h1>
-    <p>Mueve el ratón o pulsa una tecla para ver los detalles del evento.</p>
+    <p id="p">Mueve el ratón o pulsa una tecla para ver los detalles del evento.</p>
 </div>
 
 <div style="height: 1000px;"></div> <!-- Espacio para poder hacer scroll y probar pageX/pageY -->
