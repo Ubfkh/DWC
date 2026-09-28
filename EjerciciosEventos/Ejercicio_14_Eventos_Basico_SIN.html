@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://w3.org">
+<html xmlns="http://w3.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Ejercicio 14 - Base Inicial</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+        }
+        p {
+            margin-top: 0;
+        }
+        .seccion {
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+            padding: 15px;
+            margin-bottom: 20px;
+            width: 500px;
+        }
+    </style>
+    <script type="text/javascript">
+
+        // TU CÓDIGO JAVASCRIPT DEBE IR AQUÍ
+        function muestraOculta() {
+
+            //Metemos el objetivo del evento en una variable para saber cuál enlace ha sido pulsado
+            const pulsado = window.event.target;
+
+            //cogemos cada enlace
+            const a1 = document.getElementById('enlace_1');
+            const a2 = document.getElementById('enlace_2');
+            const a3 = document.getElementById('enlace_3');
+
+            //comprobamos cuál de los tres enlaces ha sido pulsado
+            if (pulsado === a1){
+                //Metemos en una variable el div correspondiente al enlace pulsado
+                const div = document.getElementById('contenidos_1');
+                //compropbamos si está oculto o mostrado
+                if (div.style.display == 'none') {
+                    //Si está oculto lo mostramos y cambiamos el texto del enlace
+                    div.style.display = '';
+                    a1.textContent = 'Ocultar contenidos';
+                }
+                else{
+                    //Si está mostrado lo ocultamos y cambiamos el texto del enlace
+                    div.style.display = 'none';
+                    a1.textContent = 'Mostrar contenidos'
+                }
+            } else if (pulsado === a2){
+                const div = document.getElementById('contenidos_2');
+                if (div.style.display == 'none') {
+                    div.style.display = '';
+                    a2.textContent = 'Ocultar contenidos';
+                }
+                else{
+                    div.style.display = 'none';
+                    a2.textContent = 'Mostrar contenidos'
+                }
+            } else if (pulsado === a3){
+                const div = document.getElementById('contenidos_3');
+                if (div.style.display == 'none') {
+                    div.style.display = '';
+                    a3.textContent = 'Ocultar contenidos';
+                }
+                else{
+                    div.style.display = 'none';
+                    a3.textContent = 'Mostrar contenidos'
+                }
+            }
+                
+
+        }
+
+    </script>
+</head>
+<body>
+
+<!-- Sección 1 -->
+<div class="seccion">
+    <div id="contenidos_1">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat congue, commodo ac, consequat vitae, turpis. Aliquam elit. Mauris egestas pede sit amet lectus.
+    </div>
+    <a id="enlace_1" href="#" onclick="muestraOculta()">Ocultar contenidos</a>
+</div>
+
+<!-- Sección 2 -->
+<div class="seccion">
+    <div id="contenidos_2">
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis diam. Pellentesque ut neque.
+    </div>
+    <a id="enlace_2" href="#" onclick="muestraOculta()">Ocultar contenidos</a>
+</div>
+
+<!-- Sección 3 -->
+<div class="seccion">
+    <div id="contenidos_3">
+        Aliquam non ac, feugiat in, ante. In id eros. Suspendisse ipsum. Proin tristique luctus tellus. Sed porttitor magna vitae nunc. Proin scelerisque sem non mollis laoreet.
+    </div>
+    <a id="enlace_3" href="#" onclick="muestraOculta()">Ocultar contenidos</a>
+</div>
+
+</body>
+</html>
