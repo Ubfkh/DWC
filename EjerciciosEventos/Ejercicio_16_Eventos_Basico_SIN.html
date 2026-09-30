@@ -31,12 +31,16 @@
             // Pista 2: Para saber las dimensiones de la ventana usa window.innerWidth y window.innerHeight
             // (o document.body.clientWidth / clientHeight si necesitas compatibilidad antigua)
 
+            //Añadimos a la ventana para que recoja el evento de pulsar el ratón
             window.addEventListener('click', (evento) => {
+
+                //cogemos las coordenadas donde se ha pulsado
                 const x = evento.clientX;
                 const y = evento.clientY;
 
                 const p = document.getElementById('p');
 
+                //vemos en que cuadrante de la pantalla ha pulsado el usuario y lo metemos en el texto del parrafo
                 if (x < (window.innerWidth / 2))
                     if (y < (window.innerHeight / 2))
                         p.textContent = 'Arriba izquierda';
