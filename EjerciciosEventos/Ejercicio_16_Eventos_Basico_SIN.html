@@ -30,6 +30,25 @@
             // Pista 1: Obtén las coordenadas del clic con elEvento.clientX y elEvento.clientY
             // Pista 2: Para saber las dimensiones de la ventana usa window.innerWidth y window.innerHeight
             // (o document.body.clientWidth / clientHeight si necesitas compatibilidad antigua)
+
+            window.addEventListener('click', (evento) => {
+                const x = evento.clientX;
+                const y = evento.clientY;
+
+                const p = document.getElementById('p');
+
+                if (x < (window.innerWidth / 2))
+                    if (y < (window.innerHeight / 2))
+                        p.textContent = 'Arriba izquierda';
+                    else
+                        p.textContent = 'Abajo izquierda';
+                else
+                    if (y < (window.innerHeight / 2))
+                        p.textContent = 'Arriba derecha';
+                    else
+                        p.textContent = 'Abajo derecha';
+                    
+            });
         }
 
         window.onload = function() {
@@ -41,7 +60,7 @@
 <body>
 <div id="info">
     <h1>Zonas de pantalla</h1>
-    <p>Haz clic en cualquier parte de la ventana para averiguar en qué cuadrante estás pulsando.</p>
+    <p id="p">Haz clic en cualquier parte de la ventana para averiguar en qué cuadrante estás pulsando.</p>
 </div>
 </body>
 </html>
