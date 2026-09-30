@@ -25,19 +25,44 @@
         // Pista: Debes asignar las funciones controladoras a document o window
         // ejemplo: document.onmousemove = tuFuncion;
 
+        //Añadimos a la ventana para que recoja el evento de mover el ratón
         window.addEventListener('mousemove', (evento) => {
+
+            //Cogemos las coordenadas del ratón
             let x = evento.clientX;
             let y = evento.clientY;
+
+            //Metemos las coordenadas en el texto del párrafo
             let p = document.getElementById('p');
             p.textContent = `Coordenada X: ${x} \n Coordenada Y: ${y}`;
+
+            //cambiamos el color del cuadro de información
+            const info = document.getElementById('info');
+            info.style.backgroundColor = '#FFFFFF';
         });
 
+        //Añadimos a la ventana para que recoja el evento de pulsar una tecla
         window.addEventListener('keypress', (evento) => {
+
+            //vemos qué tecla ha sido pulsada
             let tecla = String.fromCharCode(evento.charCode);
+
+            //metemos la tecla en el texto del párrafo
             let p = document.getElementById('p');
             p.textContent = `tecla: ${tecla}`;
             
-            
+            //cambiamos el color del cuadro de información
+            const info = document.getElementById('info');
+            info.style.backgroundColor = '#CCE6FF';
+        });
+
+
+        //Añadimos a la ventana para que recoja el evento de cuando se pulsa el ratón
+        window.addEventListener('click', (evento) => {
+
+            //cambiamos el color del cuadro de información
+            const info = document.getElementById('info');
+            info.style.backgroundColor = '#FFFFCC';
         });
 
     </script>
