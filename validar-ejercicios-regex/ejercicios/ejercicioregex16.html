@@ -9,7 +9,8 @@
   <p>Extrae la palabra completa pan de la frase. No debe coincidir con pan dentro de pantalla.</p>
   <script>
     const texto = "pan, panadería y mazapán";
-    console.log(/* TODO */);
+    const res = texto.match((`\\bpan\\b`, "i"));
+    console.log(res);
   </script>
 </body>
 </html>
