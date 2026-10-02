@@ -9,7 +9,10 @@
   <p>Comprueba si &quot;año&quot; contiene ñ usando el escape \uXXXX.</p>
   <script>
     const texto = "año";
-    console.log(/* TODO */);
+
+    const res = /\u00f1/.test("año");
+
+    console.log(res);
   </script>
 </body>
 </html>
