@@ -8,8 +8,12 @@
   <h1>Carácter opcional</h1>
   <p>Comprueba que un patrón acepta tanto &quot;color&quot; como &quot;colour&quot;.</p>
   <script>
-    console.log(/* TODO para "color" */);
-    console.log(/* TODO para "colour" */);
+
+    const res1 = "color".match(/color || colour/);
+    const res2 = "colour".match(/color || colour/);
+
+    console.log(res1);
+    console.log(res2);
   </script>
 </body>
 </html>

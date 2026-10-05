@@ -9,7 +9,10 @@
   <p>Encuentra una secuencia de entre dos y cuatro dígitos. Comprueba qué parte devuelve el patrón para &quot;a12345b&quot;.</p>
   <script>
     const texto = "a12345b";
-    console.log(/* TODO */);
+
+    const res = texto.match(/[0-9]{2,4}/);
+
+    console.log(res);
   </script>
 </body>
 </html>

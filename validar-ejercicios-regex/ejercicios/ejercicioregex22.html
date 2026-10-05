@@ -9,7 +9,10 @@
   <p>Extrae la primera secuencia de al menos tres dígitos.</p>
   <script>
     const texto = "id 42; referencia 7890";
-    console.log(/* TODO */);
+
+    const res = texto.match(/[0-9]{3,}/);
+
+    console.log(res);
   </script>
 </body>
 </html>

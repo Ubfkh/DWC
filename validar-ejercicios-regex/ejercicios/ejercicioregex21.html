@@ -9,7 +9,10 @@
   <p>Comprueba que el código tiene exactamente tres letras minúsculas seguidas de dos dígitos.</p>
   <script>
     const codigo = "abc42";
-    console.log(/* TODO */);
+
+    const res = codigo.match(/[a-z]{3}/);
+
+    console.log(res);
   </script>
 </body>
 </html>
