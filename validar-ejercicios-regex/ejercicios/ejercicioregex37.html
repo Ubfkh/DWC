@@ -9,7 +9,8 @@
   <p>Extrae las líneas que contienen exactamente una letra o dígito.</p>
   <script>
     const texto = "a\n12\nB\n#";
-    console.log(/* TODO */);
+    const res = texto.match(/^\w$/gm);
+    console.log(res);
   </script>
 </body>
 </html>
