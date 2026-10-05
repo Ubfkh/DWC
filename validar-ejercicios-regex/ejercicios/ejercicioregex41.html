@@ -9,7 +9,8 @@
   <p>Comprueba si el texto contiene algún carácter con la propiedad Unicode Emoji.</p>
   <script>
     const texto = "plan: café ☕";
-    console.log(/* TODO */);
+    const res = /\u{2615}/u.test(texto);
+    console.log(res);
   </script>
 </body>
 </html>

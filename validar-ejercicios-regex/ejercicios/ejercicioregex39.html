@@ -9,7 +9,8 @@
   <p>Comprueba si la cadena contiene el emoji indicado mediante un escape Unicode de punto de código.</p>
   <script>
     const texto = "Hola 😀";
-    console.log(/* TODO */);
+    const res = /\u{1F600}/u.test(texto);
+    console.log(res);
   </script>
 </body>
 </html>
