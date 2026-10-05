@@ -9,7 +9,8 @@
   <p>Extrae los números que no están seguidos por px de &quot;10px 2em 30px 4em&quot;. Evita que el motor retroceda y devuelva solo una parte de un número seguido por px.</p>
   <script>
     const medidas = "10px 2em 30px 4em";
-    console.log(/* TODO */);
+    const res = medidas.match(/\d+(?!px)/);
+    console.log(res);
   </script>
 </body>
 </html>

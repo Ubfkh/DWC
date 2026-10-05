@@ -9,7 +9,10 @@
   <p>Extrae solo la primera etiqueta &lt;b&gt;...&lt;/b&gt; de la cadena, sin abarcar las dos.</p>
   <script>
     const html = "<b>uno</b> y <b>dos</b>";
-    console.log(/* TODO */);
+
+    const res = html.match(/<b>.*?<\/b>/)[0]
+
+    console.log(res);
   </script>
 </body>
 </html>

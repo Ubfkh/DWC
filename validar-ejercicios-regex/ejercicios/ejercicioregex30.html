@@ -9,7 +9,8 @@
   <p>Comprueba si hay una letra seguida por la misma letra, ignorando mayúsculas.</p>
   <script>
     const texto = "Abba";
-    console.log(/* TODO */);
+    const res = /(\w)\1/i.test(texto);
+    console.log(res);
   </script>
 </body>
 </html>

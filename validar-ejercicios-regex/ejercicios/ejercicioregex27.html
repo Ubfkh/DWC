@@ -9,7 +9,8 @@
   <p>Extrae el año de &quot;2026-10&quot; con un grupo llamado anio y muestra ese grupo.</p>
   <script>
     const fecha = "2026-10";
-    console.log(/* TODO */);
+    const res = fecha.match(/(?<anio>\d{4})/).groups.anio
+    console.log(res);
   </script>
 </body>
 </html>

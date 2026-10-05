@@ -9,7 +9,8 @@
   <p>Usa un grupo no capturador para reconocer una o más repeticiones de ja. Muestra la coincidencia completa en &quot;jajaja!&quot;.</p>
   <script>
     const texto = "jajaja!";
-    console.log(/* TODO */);
+    const res = /ja{1,}/.test(texto);
+    console.log(res);
   </script>
 </body>
 </html>

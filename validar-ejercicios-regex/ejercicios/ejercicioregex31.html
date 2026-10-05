@@ -9,7 +9,8 @@
   <p>Extrae el número que está inmediatamente seguido del símbolo €, sin incluir el símbolo en la coincidencia.</p>
   <script>
     const precio = "Total: 125€";
-    console.log(/* TODO */);
+    const res = precio.match(/\d+(?=€)/)[0];
+    console.log(res);
   </script>
 </body>
 </html>

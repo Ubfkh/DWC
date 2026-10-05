@@ -9,7 +9,8 @@
   <p>Comprueba si la cadena contiene dos letras \w iguales seguidas.</p>
   <script>
     const texto = "good";
-    console.log(/* TODO */);
+    const res = /(\w)\1/.test(texto);
+    console.log(res);
   </script>
 </body>
 </html>
